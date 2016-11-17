@@ -9,8 +9,8 @@
  </div>
 </template>
 <script type="text/javascript">
- import Register from './Register'
- import Signin from './SignIn'
+ import Register from './login/Register'
+ import Signin from './login/SignIn'
 
  export default {
   name:'Login',

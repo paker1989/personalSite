@@ -11,7 +11,6 @@
 </template>
 <script type="text/javascript">
 
-
  export default {
   name:'Inscription',
   data() {
@@ -24,11 +23,9 @@
    signIn: function() {
    var obj = {password:this.password};
     this.$http.post('/signIn',obj).then(function(res){
-     console.log('yes');
-     console.log(res.data);
      if(res.data.authenticatedUsers.length>=1)
      {
-      alert('signed in!');
+      this.$route.router.go('/repository');
      }else{
       alert('failed');
      }
@@ -72,5 +69,6 @@
   font-size: 20px;
   padding: .4em 0;
   margin-top: 1em;
+  cursor: pointer;
  }
 </style>
